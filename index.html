@@ -136,17 +136,31 @@
             background: rgba(0,0,0,0.7); z-index: 100;
             display: none; align-items: center; justify-content: center;
             backdrop-filter: blur(5px);
+            padding: 15px; box-sizing: border-box;
         }
         .modal-card {
-            background: white; padding: 15px 15px 30px 15px;
-            border-radius: 10px; max-width: 280px; text-align: center;
+            background: white; padding: 12px 15px 20px 15px;
+            border-radius: 15px; width: 100%; max-width: 260px; text-align: center;
             box-shadow: 0 20px 50px rgba(0,0,0,0.3); animation: zoomIn 0.3s ease;
+            box-sizing: border-box; max-height: 85vh; display: flex; flex-direction: column; justify-content: center;
         }
-        .modal-card img { width: 100%; border-radius: 3px; margin-bottom: 10px; }
+        .modal-card img { 
+            width: 100%; 
+            max-height: 45vh; 
+            object-fit: contain; 
+            border-radius: 8px; 
+            margin-bottom: 8px; 
+        }
+        .modal-card p {
+            font-size: 0.95rem;
+            margin: 5px 0 10px 0;
+            line-height: 1.4;
+            white-space: pre-line;
+        }
         .btn-keep {
             background: var(--primary); color: white; border: none;
-            padding: 10px 25px; border-radius: 30px; font-family: 'Kanit';
-            font-size: 1rem; cursor: pointer; margin-top: 15px;
+            padding: 8px 20px; border-radius: 30px; font-family: 'Kanit';
+            font-size: 0.95rem; cursor: pointer; margin-top: 5px;
         }
         @keyframes zoomIn { from { transform: scale(0.5); } to { transform: scale(1); } }
 
@@ -255,7 +269,7 @@
     <script>
         const photos = [
             { src: "photo1.jpg", caption: "รูปคู่รูปแรก\nอาจเป็นแค่ภาพธรรมดา\nแต่สำหรับเรา มันคือความทรงจำ\nที่พิเศษกว่ารูปไหนๆ💕" },
-            { src: "photo2.jpg", caption: "วิวตรงหน้าอาจสวย\bแต่คนข้างหน้ากลับน่ามองกว่า" },
+            { src: "photo2.jpg", caption: "วิวตรงหน้าอาจสวย\nแต่คนข้างหน้ากลับน่ามองกว่า" },
             { src: "photo3.jpg", caption: "ภาพที่ไม่ได้ตั้งใจถ่าย\nแต่กลับเป็นภาพ\nที่อยากเก็บไว้นานที่สุด" },
             { src: "photo4.jpg", caption: "เรียบง่าย\nแต่มีความหมาย💕" },
             { src: "photo5.jpg", caption: "อีกหนึ่งวันที่อยากจดจำ💕" }
